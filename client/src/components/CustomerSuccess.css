@@ -1,0 +1,129 @@
+.cs {
+  background: #111111;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.cs__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cs__h2 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.cs__marquee-wrap {
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.cs__marquee {
+  display: flex;
+  width: 100%;
+}
+
+.cs__marquee-inner {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  padding: 8px 0;
+}
+
+.cs__marquee--left .cs__marquee-inner {
+  animation: marqueeLeft 32s linear infinite;
+}
+
+.cs__marquee--right .cs__marquee-inner {
+  animation: marqueeRight 32s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.cs__marquee:hover .cs__marquee-inner {
+  animation-play-state: paused;
+}
+
+/* Card */
+.cs__card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 22px;
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cs__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.cs__stars {
+  font-size: 15px;
+  color: #25D366;
+  letter-spacing: 1px;
+}
+
+.cs__review-text {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.cs__reviewer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cs__reviewer-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #0A0A0A;
+  color: #F59E0B;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cs__reviewer-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.cs__reviewer-company {
+  font-size: 11px;
+  color: #6B7280;
+}
+
+@media (max-width: 768px) {
+  .cs {
+    padding: 48px 0;
+  }
+}

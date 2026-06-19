@@ -1,0 +1,74 @@
+.wc {
+  background: #0A0A0A;
+  padding: 80px 0;
+}
+
+.wc__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.wc__h2 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.wc__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.wc__card {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  cursor: default;
+}
+
+.wc__card:hover {
+  border-color: var(--accent, #F59E0B);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.wc__card-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.wc__card-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.wc__card-body {
+  font-size: 15px;
+  color: #9CA3AF;
+  line-height: 1.75;
+}
+
+@media (max-width: 1024px) {
+  .wc__cards {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .wc {
+    padding: 48px 0;
+  }
+}

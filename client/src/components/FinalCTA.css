@@ -1,0 +1,100 @@
+.fcta {
+  background: #0A0A0A;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.fcta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.fcta__container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+  position: relative;
+}
+
+.fcta__h2 {
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.fcta__body {
+  font-size: 17px;
+  color: #9CA3AF;
+  line-height: 1.75;
+  margin-bottom: 44px;
+}
+
+.fcta__ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.fcta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.fcta__btn--amber {
+  background: #F59E0B;
+  color: #000;
+  border: 2px solid #F59E0B;
+}
+
+.fcta__btn--amber:hover {
+  background: #FBBF24;
+  border-color: #FBBF24;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.35);
+}
+
+.fcta__btn--outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.fcta__btn--outline:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.fcta__note {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 768px) {
+  .fcta {
+    padding: 72px 0;
+  }
+}
